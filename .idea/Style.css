@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: scroll
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    margin: 0;
+    color: #1f2328;
+    font-family: "Times New Roman", system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 3rem;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffedd6cc;
+    border-bottom: 2px solid goldenrod;
+}
+header .logo2{
+    max-height: 4rem;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin-right: -60px;
+    border: 0;
+    transition: all 5s;
+    cursor: pointer;
+}
+header .logo {
+    max-height: 5rem;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin-right: -60px;
+    margin-top: -5px;
+    border: 0;
+    transition: all 5s;
+    cursor: pointer;
+}
+
+
+header h1 {
+    color: goldenrod;
+    font-weight: 400;
+    margin-left: 0;
+    margin-bottom: 40px;
+}
+header h3 {
+    color: goldenrod;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: -160px;
+
+}
+header h4{
+    font-weight: 400;
+    margin-bottom: -60px;
+    margin-left: -38px;
+}
+.menu{
+    display: flex;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img, div {
+    box-sizing: border-box;
+    width: 20%;
+    margin: 8px;
+    padding: 8px;
+    border: 3px solid goldenrod;
+}
