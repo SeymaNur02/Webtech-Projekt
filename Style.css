@@ -26,58 +26,50 @@ body {
     background-color: #ffedd6cc;
     border-bottom: 3px solid goldenrod;
     min-height: 100px; /* Mindesthöhe setzen, falls nötig */
-
-    .menu-container {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin-left: auto;
-        border: none;
-
-        .menu {
-            display: flex;
-            flex-direction: column; /* Icon und Titel vertikal anordnen */
-            align-items: center; /* Zentriert das Icon und den Titel */
-            text-align: center; /* Zentriert den Text */
-            margin-left: auto;
-            border: none;
-
-            .icon {
-                border: none;
-                width: 50px;
-                height: auto;
-            }
-
-            .menu-title {
-                border: none;
-                color: goldenrod;
-            }
-        }
-    }
-
-    .logo-container {
-        display: flex;
-        align-items: center;
-        border: none;
-        gap: 1rem; /* Fügt Abstand zwischen Logo und Text hinzu */
-
-        .logo {
-            border: none;
-            width: 5rem;
-        }
-        .title {
-            color: goldenrod;
-            font-weight: 400;
-            margin: 0;
-        }
-        .title2 {
-            color: goldenrod;
-            font-weight: 400;
-            margin: 0;
-        }
-    }
 }
-
+.menu-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    border: none;
+}
+.menu {
+    display: flex;
+    flex-direction: column; /* Icon und Titel vertikal anordnen */
+    align-items: center; /* Zentriert das Icon und den Titel */
+    text-align: center; /* Zentriert den Text */
+    margin-left: auto;
+    border: none;
+}
+.icon {
+    border: none;
+    width: 50px;
+    height: auto;
+}
+.menu-title {
+    border: none;
+    color: goldenrod;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    border: none;
+    gap: 1rem;
+}
+.logo {
+    border: none;
+    width: 5rem;
+}
+.title {
+    color: goldenrod;
+    font-weight: 400;
+    padding-right:3.5rem;
+}
+.title2 {
+    color: goldenrod;
+    font-weight: 400;
+}
 
 main {
     display: flex;
