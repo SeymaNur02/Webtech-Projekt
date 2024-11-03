@@ -17,62 +17,67 @@ body {
     min-height: 100vh;
 }
 
-header {
+.header-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem 3rem;
     align-items: center;
     padding: 1rem;
     background-color: #ffedd6cc;
-    border-bottom: 2px solid goldenrod;
-}
-header .logo2{
-    max-height: 4rem;
-    text-align: center;
-    width: auto;
-    height: auto;
-    margin-right: -60px;
-    border: 0;
-    transition: all 5s;
-    cursor: pointer;
-}
-header .logo {
-    max-height: 5rem;
-    text-align: center;
-    width: auto;
-    height: auto;
-    margin-right: -60px;
-    margin-top: -5px;
-    border: 0;
-    transition: all 5s;
-    cursor: pointer;
+    border-bottom: 3px solid goldenrod;
+    min-height: 100px; /* Mindesthöhe setzen, falls nötig */
+
+    .menu-container {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-left: auto;
+        border: none;
+
+        .menu {
+            display: flex;
+            flex-direction: column; /* Icon und Titel vertikal anordnen */
+            align-items: center; /* Zentriert das Icon und den Titel */
+            text-align: center; /* Zentriert den Text */
+            margin-left: auto;
+            border: none;
+
+            .icon {
+                border: none;
+                width: 50px;
+                height: auto;
+            }
+
+            .menu-title {
+                border: none;
+                color: goldenrod;
+            }
+        }
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        border: none;
+        gap: 1rem; /* Fügt Abstand zwischen Logo und Text hinzu */
+
+        .logo {
+            border: none;
+            width: 5rem;
+        }
+        .title {
+            color: goldenrod;
+            font-weight: 400;
+            margin: 0;
+        }
+        .title2 {
+            color: goldenrod;
+            font-weight: 400;
+            margin: 0;
+        }
+    }
 }
 
-
-header h1 {
-    color: goldenrod;
-    font-weight: 400;
-    margin-left: 0;
-    margin-bottom: 40px;
-}
-header h3 {
-    color: goldenrod;
-    font-weight: 400;
-    margin-bottom: 20px;
-    text-align: center;
-    margin-top: 50px;
-    margin-left: -160px;
-
-}
-header h4{
-    font-weight: 400;
-    margin-bottom: -60px;
-    margin-left: -38px;
-}
-.menu{
-    display: flex;
-
-}
 
 main {
     display: flex;
