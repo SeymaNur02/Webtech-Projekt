@@ -2,84 +2,226 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: scroll
 }
 
 body {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    height: 100vh;
-    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-image: url('Hintergrund9.jpg');
+    background-size: cover;
+    background-position: center;
     color: #1f2328;
-    font-family: "Times New Roman", system-ui, -apple-system, 'Segoe UI', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    min-height: 100vh;
 }
 
 .header-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 3rem;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    width: 100%;
+    padding: 1rem 2rem;
     background-color: #ffedd6cc;
-    border-bottom: 3px solid goldenrod;
-    min-height: 100px; /* Mindesthöhe setzen, falls nötig */
+    border-bottom: 2px solid goldenrod;
 }
-.menu-container {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-left: auto;
-    border: none;
-}
-.menu {
-    display: flex;
-    flex-direction: column; /* Icon und Titel vertikal anordnen */
-    align-items: center; /* Zentriert das Icon und den Titel */
-    text-align: center; /* Zentriert den Text */
-    margin-left: auto;
-    border: none;
-}
-.icon {
-    border: none;
-    width: 50px;
-    height: auto;
-}
-.menu-title {
-    border: none;
-    color: goldenrod;
-}
+
 .logo-container {
     display: flex;
     align-items: center;
-    border: none;
     gap: 1rem;
 }
+
 .logo {
-    border: none;
-    width: 5rem;
-}
-.title {
-    color: goldenrod;
-    font-weight: 400;
-    padding-right:3.5rem;
-}
-.title2 {
-    color: goldenrod;
-    font-weight: 400;
+    width: 50px;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
 }
-img, div {
-    box-sizing: border-box;
-    width: 20%;
-    margin: 8px;
-    padding: 8px;
+
+.title-group .title,
+.title-group .subtitle {
+    font-family: "Tangerine", cursive;
+    font-weight: 1000;
+    font-size: 30px;
+    color: goldenrod;
+}
+
+.subtitle {
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-size: 20px; /* Schriftgröße des Slogans */
+    color: goldenrod;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 2rem 1rem;
+    transition: right 0.3s;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sidebar ul li a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.submenu.active {
+    display: block;
+}
+
+.product-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(255, 248, 220, 0.9);
+    max-width: 1000px;
+    width: 100%;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-gallery h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: goldenrod;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.product {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+    margin: 1rem;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 150px;
     border: 3px solid goldenrod;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
+}
+
+.contact-form {
+    padding: 2rem;
+    background: rgba(250, 250, 250, 0.9);
+    border: 2px solid #e0e0e0;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form button {
+    padding: 0.8rem 2rem;
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.contact-form button:hover {
+    background-color: #d4a017;
+}
+
+.impressum {
+    padding: 2rem;
+    background: rgba(250, 250, 250, 0.9);
+    border: 2px solid #e0e0e0;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.impressum h2 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.impressum p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-top: 2px solid goldenrod;
+    width: 100%;
 }

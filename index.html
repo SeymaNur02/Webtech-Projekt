@@ -1,40 +1,157 @@
 <!doctype html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lumière</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière - Parfum-Kollektion</title>
 
+    <!-- Google Fonts Preconnect und Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body style = "background-image: url('Hintergrund9.jpg');background-size: cover;background-position: center;">
+<body>
 
 <header class="header-container">
-       <!--<img src = "strich.png" class ="logo3">-->
     <div class="logo-container">
         <img src="perfume_logo2.gif" class="logo" alt="Lumière Logo">
-        <h1 class ="title" ><em><strong>Lumière</strong></em></h1>
-        <h3 class = "title2" ><strong>Illuminate Your Senses</strong></h3>
-    </div>
-
-    <div class="menu-container">
-        <div class="menu">
-            <img src="menu_icon.png" class = "icon" alt="Menu Icon">
-            <h4 class="menu-title">Menu</h4>
+        <div class="title-group">
+            <h1 class="title tangerine-bold">Lumière</h1>
+            <h3 class="subtitle tangerine-bold">Illuminate Your Senses</h3>
         </div>
     </div>
+    <img src="menu_icon.png" alt="Menü" class="menu-icon" onclick="toggleMenu()">
 </header>
 
+<!-- Sidebar Menü -->
+<nav id="sidebar" class="sidebar">
+    <ul>
+        <li><a href="#home">Startseite</a></li>
+        <li onclick="toggleSubMenu()">Kategorie</li>
+        <ul id="submenu" class="submenu">
+            <li><a href="#maenner">Männer</a></li>
+            <li><a href="#frauen">Frauen</a></li>
+            <li><a href="#kinder">Kinder</a></li>
+        </ul>
+        <li><a href="#impressum">Impressum</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+</nav>
+
 <main>
-<p><img src = "Parfüm1.jpg"><img src = "Parfüm2.jpg"><img src = "Parfüm3.jpg"></p>
+    <!-- Kategorie Männer -->
+    <section id="maenner" class="product-gallery">
+        <h2>Parfum für Männer</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="Parfüm1.jpg" alt="Parfüm für Männer 1" class="product-image">
+                <h3>Parfüm für Männer 1</h3>
+                <p>Preis: 50€</p>
+                <p>Beschreibung: Ein starker und verführerischer Duft für den modernen Mann.</p>
+            </div>
+            <div class="product">
+                <img src="Parfüm2.jpg" alt="Parfüm für Männer 2" class="product-image">
+                <h3>Parfüm für Männer 2</h3>
+                <p>Preis: 60€</p>
+                <p>Beschreibung: Ein maskuliner Duft, der Kraft und Stil verkörpert.</p>
+            </div>
+            <div class="product">
+                <img src="Parfüm3.jpg" alt="Parfüm für Männer 3" class="product-image">
+                <h3>Parfüm für Männer 3</h3>
+                <p>Preis: 55€</p>
+                <p>Beschreibung: Ein dynamischer Duft für den abenteuerlustigen Mann.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategorie Frauen -->
+    <section id="frauen" class="product-gallery">
+        <h2>Parfum für Frauen</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="Parfüm1.jpg" alt="Parfüm für Frauen 1" class="product-image">
+                <h3>Parfüm für Frauen 1</h3>
+                <p>Preis: 50€</p>
+                <p>Beschreibung: Ein femininer Duft, der Eleganz und Stil ausdrückt.</p>
+            </div>
+            <div class="product">
+                <img src="Parfüm2.jpg" alt="Parfüm für Frauen 2" class="product-image">
+                <h3>Parfüm für Frauen 2</h3>
+                <p>Preis: 60€</p>
+                <p>Beschreibung: Ein sinnlicher Duft, der die Weiblichkeit feiert.</p>
+            </div>
+            <div class="product">
+                <img src="Parfüm3.jpg" alt="Parfüm für Frauen 3" class="product-image">
+                <h3>Parfüm für Frauen 3</h3>
+                <p>Preis: 55€</p>
+                <p>Beschreibung: Ein bezaubernder Duft für die moderne Frau.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kategorie Kinder -->
+    <section id="kinder" class="product-gallery">
+        <h2>Parfum für Kinder</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="Parfüm1.jpg" alt="Parfüm für Kinder 1" class="product-image">
+                <h3>Parfüm für Kinder 1</h3>
+                <p>Preis: 30€</p>
+                <p>Beschreibung: Ein frischer und sanfter Duft für die Kleinen.</p>
+            </div>
+            <div class="product">
+                <img src="Parfüm2.jpg" alt="Parfüm für Kinder 2" class="product-image">
+                <h3>Parfüm für Kinder 2</h3>
+                <p>Preis: 35€</p>
+                <p>Beschreibung: Ein leichter Duft für den verspielten Charakter.</p>
+            </div>
+            <div class="product">
+                <img src="Parfüm3.jpg" alt="Parfüm für Kinder 3" class="product-image">
+                <h3>Parfüm für Kinder 3</h3>
+                <p>Preis: 32€</p>
+                <p>Beschreibung: Ein sanfter Duft für besondere Anlässe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontaktformular -->
+    <section id="kontakt" class="contact-form">
+        <h2>Kontaktieren Sie uns</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Senden</button>
+        </form>
+    </section>
+
+    <!-- Impressum -->
+    <section id="impressum" class="impressum">
+        <h2>Impressum</h2>
+        <p>Hier stehen die rechtlichen Informationen zum Anbieter dieser Seite.</p>
+    </section>
 </main>
 
-</body>
+<footer class="footer">
+    <p>© 2024 Lumière. Alle Rechte vorbehalten.</p>
+</footer>
 
 <script>
-const logo = document.querySelector('.logo');
-const randomAngle = Math.round(Math.random() * 360);
+    function toggleMenu() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
 
+    function toggleSubMenu() {
+        document.getElementById("submenu").classList.toggle("active");
+    }
 </script>
+</body>
 </html>
