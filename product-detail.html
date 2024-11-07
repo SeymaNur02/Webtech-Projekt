@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumière - Produktdetails</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<header class="header-container">
+    <div class="logo-container">
+        <img src="perfume_logo2.gif" class="logo" alt="Lumière Logo">
+        <div class="title-group">
+            <h1 class="title tangerine-bold">Lumière</h1>
+            <h3 class="subtitle tangerine-bold">Illuminate Your Senses</h3>
+        </div>
+    </div>
+    <img src="menu_icon.png" alt="Menü" class="menu-icon" onclick="toggleMenu()">
+</header>
+
+<!-- Sidebar Menü -->
+<nav id="sidebar" class="sidebar">
+    <ul>
+        <li><a href="#home">Startseite</a></li>
+        <li onclick="toggleSubMenu()">Kategorie</li>
+        <ul id="submenu" class="submenu">
+            <li><a href="#frauen">Frauen</a></li>
+            <li><a href="#maenner">Männer</a></li>
+            <li><a href="#kinder">Kinder</a></li>
+        </ul>
+        <li><a href="#impressum">Impressum</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div id="product-detail" class="product-details">
+        <img id="detail-image" src="" alt="Produktbild" class="product-image">
+        <h2 id="detail-name"></h2>
+        <p id="detail-price"></p>
+        <p id="detail-description"></p>
+        <button type="Übersicht"><a href="index.html">Zurück zur Produktübersicht</a></button>
+
+    </div>
+
+    <!-- Impressum -->
+    <section id="impressum" class="impressum">
+        <h2>Impressum</h2>
+        <p>Hier stehen die rechtlichen Informationen zum Anbieter dieser Seite.</p>
+    </section>
+</main>
+
+
+<footer class="footer">
+    <p>© 2024 Lumière. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+
+    function toggleMenu() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+
+    function toggleSubMenu() {
+        document.getElementById("submenu").classList.toggle("active");
+    }
+
+    // Funktion, um die Produktdetails aus localStorage zu holen und anzuzeigen
+    function setProductDetails() {
+        const name = localStorage.getItem('productName');
+        const price = localStorage.getItem('productPrice');
+        const description = localStorage.getItem('productDescription');
+        const image = localStorage.getItem('productImage');
+
+        // Setze die Produktdetails auf der Seite
+        document.getElementById('detail-name').textContent = name;
+        document.getElementById('detail-price').textContent = `Preis: ${price}`;
+        document.getElementById('detail-description').textContent = description;
+        document.getElementById('detail-image').src = image;
+    }
+    setProductDetails();
+</script>
+
+
+</body>
+</html>
