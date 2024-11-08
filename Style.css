@@ -239,18 +239,21 @@ body {
     padding: 2rem;
     background: #ffedd6cc;
     border: 2px solid goldenrod;
-    max-width: 800px;
-    margin: 5rem auto;
+    max-width: 700px;
+    margin: 3rem auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     height: 100%;
     width: 100%;
-
+}
+.map-container{
+    display: flex;
 }
 .Standort h2{
     color: goldenrod;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .impressum {
