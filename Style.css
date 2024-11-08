@@ -43,6 +43,7 @@ body {
     z-index: 1000;
     box-shadow: 0px 6px 6px goldenrod;
     font-family: "Tangerine", cursive;
+    border-top: 2px solid goldenrod;
 }
 .banner p {
     margin: 0; /* Entfernt den Standardabstand */
@@ -102,6 +103,16 @@ body {
     margin-bottom: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.sidebar ul li b {
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+.sidebar ul li b:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .sidebar ul li a {
@@ -168,6 +179,7 @@ body {
 
 .product-image:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 .contact-form {
@@ -222,6 +234,23 @@ body {
 
 .contact-form button:hover {
     background-color: #d4a017;
+}
+.Standort{
+    padding: 2rem;
+    background: #ffedd6cc;
+    border: 2px solid goldenrod;
+    max-width: 800px;
+    margin: 5rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 100%;
+    width: 100%;
+
+}
+.Standort h2{
+    color: goldenrod;
+    text-align: center;
 }
 
 .impressum {
