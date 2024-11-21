@@ -17,6 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 110px;
     padding: 1rem 2rem;
     background-color: #ffedd6cc;
     border-bottom: 2px solid goldenrod;
