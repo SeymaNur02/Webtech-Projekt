@@ -22,6 +22,9 @@
             <h3 class="subtitle tangerine-bold">Illuminate Your Senses</h3>
         </div>
     </div>
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Produkte suchen..." oninput="handleSearchAndFilter()">
+    </div>
     <img src="menu_icon.png" alt="Menü" class="menu-icon" onclick="toggleMenu()">
 </header>
 
@@ -47,6 +50,22 @@
 </nav>
 
 <main>
+    <div class="filter-container">
+        <label for="priceMin">Preis von:</label>
+        <input type="number" id="priceMin" oninput="handleSearchAndFilter()">
+
+        <label for="priceMax">bis:</label>
+        <input type="number" id="priceMax" oninput="handleSearchAndFilter()">
+
+        <label for="categoryFilter">Kategorie:</label>
+        <select id="categoryFilter" onchange="handleSearchAndFilter()">
+            <option value="">Alle Kategorien</option>
+            <option value="Frauen">Frauen</option>
+            <option value="Männer">Männer</option>
+            <option value="Kinder">Kinder</option>
+        </select>
+    </div>
+</main>
 
     <!-- Kategorie Frauen -->
     <section id="frauen" class="product-gallery">
@@ -123,6 +142,13 @@
         </div>
     </section>
 
+    <!-- Neuer Bereich für Suchergebnisse -->
+<section id="search-results" class="product-gallery" style="display: none;">
+    <h2>Suchergebnisse</h2>
+    <div class="product-container"></div>
+</section>
+
+
     <!-- Kontaktformular -->
     <section id="kontakt" class="contact-form">
         <h2>Kontaktieren Sie uns</h2>
@@ -181,6 +207,116 @@
         // Wechsle zur Produktdetailseite (PDP)
         window.location.href = 'product-detail.html';
     }
+
+    // Dummy-Daten für Produkte (oder aus deiner Datenquelle wie einer Datenbank laden)
+    let allProducts = [
+        { name: "Shalimar", price: 50, category: "Frauen" },
+        { name: "Hugo Boss", price: 60, category: "Männer" },
+        { name: "Sparkles", price: 30, category: "Kinder" },
+        // Füge weitere Produkte hinzu...
+    ];
+
+    // Funktion zur dynamischen Anzeige von Produkten
+    function displayProducts(products) {
+        const productContainer = document.querySelector(".product-container");
+        productContainer.innerHTML = ""; // Lösche vorherige Inhalte
+
+        products.forEach(product => {
+            const productHTML = `
+            <div class="product">
+                <h3>${product.name}</h3>
+                <p>Preis: ${product.price}€</p>
+                <p>Kategorie: ${product.category}</p>
+            </div>
+        `;
+            productContainer.innerHTML += productHTML;
+        });
+    }
+
+    // Funktion zur Verarbeitung von Suche und Filtern
+    function handleSearchAndFilter() {
+        const query = document.getElementById("searchBar").value.toLowerCase();
+        const minPrice = parseFloat(document.getElementById("priceMin").value) || 0;
+        const maxPrice = parseFloat(document.getElementById("priceMax").value) || Infinity;
+        const category = document.getElementById("categoryFilter").value;
+
+        const filteredProducts = allProducts.filter(product => {
+            const matchesQuery = product.name.toLowerCase().includes(query);
+            const inPriceRange = product.price >= minPrice && product.price <= maxPrice;
+            const inCategory = category ? product.category === category : true;
+            return matchesQuery && inPriceRange && inCategory;
+        });
+
+        const searchResultsContainer = document.getElementById("search-results");
+        const productContainer = searchResultsContainer.querySelector(".product-container");
+
+        // Wenn Ergebnisse gefunden wurden, zeige sie an
+        if (filteredProducts.length > 0) {
+            productContainer.innerHTML = ""; // Lösche vorherige Suchergebnisse
+            filteredProducts.forEach(product => {
+                const productHTML = `
+                <div class="product">
+                    <h3>${product.name}</h3>
+                    <p>Preis: ${product.price}€</p>
+                    <p>Kategorie: ${product.category}</p>
+                </div>
+            `;
+                productContainer.innerHTML += productHTML;
+            });
+
+            // Originale Kategorien ausblenden
+            document.querySelectorAll(".product-gallery").forEach(section => {
+                if (section.id !== "search-results") {
+                    section.style.display = "none";
+                }
+            });
+
+            // Suchergebnisse anzeigen
+            searchResultsContainer.style.display = "block";
+        } else {
+            // Wenn keine Ergebnisse gefunden wurden oder die Suchleiste leer ist
+            searchResultsContainer.style.display = "none";
+
+            // Originale Kategorien wieder einblenden
+            document.querySelectorAll(".product-gallery").forEach(section => {
+                section.style.display = "block";
+            });
+
+
+        }
+    }
+
+    function setProductDetails() {
+        const name = localStorage.getItem("productName") || "Produktname nicht verfügbar";
+        const price = localStorage.getItem("productPrice") || "Preis nicht verfügbar";
+        const description = localStorage.getItem("productDescription") || "Beschreibung nicht verfügbar";
+        const image = localStorage.getItem("productImage") || "default.jpg";
+
+        document.getElementById("detail-name").textContent = name;
+        document.getElementById("detail-price").textContent = `Preis: ${price}`;
+        document.getElementById("detail-description").textContent = description;
+        document.getElementById("detail-image").src = image;
+    }
+
+
+    // Event-Listener für die Enter-Taste
+    document.addEventListener("keydown", function (event) {
+        // Prüfe, ob die Enter-Taste gedrückt wurde
+        if (event.key === "Enter") {
+            event.preventDefault(); // Verhindert das Standardverhalten (z. B. Formular-Submit)
+            handleSearchAndFilter(); // Ruft die Such- und Filterfunktion auf
+        }
+    });
+
+
+    // Initiales Laden aller Produkte
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("searchBar").addEventListener("input", handleSearchAndFilter);
+        document.getElementById("priceMin").addEventListener("input", handleSearchAndFilter);
+        document.getElementById("priceMax").addEventListener("input", handleSearchAndFilter);
+        document.getElementById("categoryFilter").addEventListener("change", handleSearchAndFilter);
+    });
+
 </script>
 </body>
 </html>
