@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af231974-98fe-4fe5-8396-a3ad6ce8de20" name="Changes" comment="logo und kleinigkeit hinzugefügt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="af231974-98fe-4fe5-8396-a3ad6ce8de20" name="Changes" comment="frontend, backend aufteilen">
       <change beforePath="$PROJECT_DIR$/Bild2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CategoryManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/CategoryManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hintergrund1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/product-detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +71,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Backend" />
+      <recent name="$PROJECT_DIR$/Frontend" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -104,7 +101,7 @@
       <workItem from="1734373254390" duration="13790000" />
       <workItem from="1734552470465" duration="10830000" />
       <workItem from="1735242819508" duration="15938000" />
-      <workItem from="1736371691899" duration="2088000" />
+      <workItem from="1736371691899" duration="2425000" />
     </task>
     <task id="LOCAL-00001" summary="erster commit">
       <option name="closed" value="true" />
@@ -330,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736353288953</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="frontend, backend aufteilen">
+      <option name="closed" value="true" />
+      <created>1736540740108</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1736540740108</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +389,8 @@
     <MESSAGE value="." />
     <MESSAGE value="Logo" />
     <MESSAGE value="logo und kleinigkeit hinzugefügt" />
-    <option name="LAST_COMMIT_MESSAGE" value="logo und kleinigkeit hinzugefügt" />
+    <MESSAGE value="frontend, backend aufteilen" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend, backend aufteilen" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
