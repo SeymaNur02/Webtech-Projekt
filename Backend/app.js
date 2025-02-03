@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
-require('dotenv').config(); // Für Umgebungsvariablen
+require('dotenv').config({ path: '/Users/seymanur/IdeaProjects/Webtech-Projekt/SQLDetail.env'}); // Für Umgebungsvariablen
 
 const app = express();
 app.use(bodyParser.json());
