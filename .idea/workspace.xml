@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af231974-98fe-4fe5-8396-a3ad6ce8de20" name="Changes" comment="refactoring">
-      <change afterPath="$PROJECT_DIR$/Backend/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+    <list default="true" id="af231974-98fe-4fe5-8396-a3ad6ce8de20" name="Changes" comment="Backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bild2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Bild3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Bild3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Bild4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Bild4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Kinder1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Kinder1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Kinder2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Kinder2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Kinder3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Kinder3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Lumiere2.1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Lumiere2.1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Männer1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Männer1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Männer4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Männer4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Männer5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Männer5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Parfüm2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Parfüm2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Parfüm3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Parfüm3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Parfüm4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/Parfüm4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/menu_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/menu_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/menu_icon.png.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Images/menu_icon.png.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hintergrund1.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +18,7 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -78,13 +59,17 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/seymanur/IdeaProjects/Webtech-Projekt&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/WebtecEdriver&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -93,17 +78,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WebtecEdriver\Backend" />
+      <recent name="E:\WebtecEdriver\Backend\routes" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Frontend/Images" />
       <recent name="$PROJECT_DIR$/Frontend" />
-      <recent name="$PROJECT_DIR$/Backend" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -129,6 +115,9 @@
       <workItem from="1738255868109" duration="1093000" />
       <workItem from="1738256968229" duration="4000" />
       <workItem from="1738501077266" duration="12912000" />
+      <workItem from="1738664357502" duration="60000" />
+      <workItem from="1738665059942" duration="3560000" />
+      <workItem from="1738668903244" duration="12861000" />
     </task>
     <task id="LOCAL-00001" summary="erster commit">
       <option name="closed" value="true" />
@@ -370,7 +359,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736541019371</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Backend">
+      <option name="closed" value="true" />
+      <created>1738691732966</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1738691732966</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +397,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="zweiter commit css" />
     <MESSAGE value="test" />
     <MESSAGE value="veränderung" />
     <MESSAGE value="HTML und CSS Veränderung" />
@@ -425,7 +421,8 @@
     <MESSAGE value="logo und kleinigkeit hinzugefügt" />
     <MESSAGE value="frontend, backend aufteilen" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="Backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Backend" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
