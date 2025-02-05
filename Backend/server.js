@@ -7,8 +7,10 @@ const authRoutes = require('./routes/auth');
 const categoryRoutes = require('./routes/categories');
 const entryRoutes = require('./routes/entries'); // Hier importierst du die Datei
 
-
 const app = express();
+
+const helmet = require('helmet');
+app.use(helmet());
 
 // Middleware
 app.use(bodyParser.json());
