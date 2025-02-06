@@ -24,8 +24,15 @@
     <div class="search-container">
         <input type="text" id="searchBar" placeholder="Produkte suchen..." oninput="handleSearchAndFilter()">
     </div>
+
+    <!-- Hier Login-Status einfügen -->
+    <div id="loginContainer">
+        <a href="login.html">Login</a> | <a href="register.html">Registrieren</a>
+    </div>
+
     <img src="menu_icon.png" alt="Menü" class="menu-icon" onclick="toggleMenu()">
 </header>
+
 
 <div class="banner">
     <p><strong>Willkommen auf Lumière!</strong></p>
@@ -322,5 +329,6 @@
     });
 
 </script>
+<script src="js/auth.js"></script>
 </body>
 </html>

@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af231974-98fe-4fe5-8396-a3ad6ce8de20" name="Changes" comment="Backend">
-      <change beforePath="$PROJECT_DIR$/Bild2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Bild2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hintergrund1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Hintergrund1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/SQLDetail.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +132,7 @@
       <workItem from="1738665059942" duration="3560000" />
       <workItem from="1738668903244" duration="12861000" />
       <workItem from="1738692332156" duration="2096000" />
-      <workItem from="1738695564965" duration="8112000" />
+      <workItem from="1738695564965" duration="14001000" />
     </task>
     <task id="LOCAL-00001" summary="erster commit">
       <option name="closed" value="true" />
@@ -382,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738692872886</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Helmet">
+      <option name="closed" value="true" />
+      <created>1738774562736</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1738774562738</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +429,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test" />
     <MESSAGE value="veränderung" />
     <MESSAGE value="HTML und CSS Veränderung" />
     <MESSAGE value="Verbesserung CSS" />
@@ -438,7 +453,8 @@
     <MESSAGE value="frontend, backend aufteilen" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="Backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backend" />
+    <MESSAGE value="Helmet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Helmet" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
