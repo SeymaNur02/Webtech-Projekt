@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumière - Parfüm-Kollektion</title>
 
+
     <!-- Google Fonts Preconnect und Import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
+
 
 <header class="header-container">
     <div class="logo-container">
@@ -25,12 +27,14 @@
         <input type="text" id="searchBar" placeholder="Produkte suchen..." oninput="handleSearchAndFilter()">
     </div>
 
+
     <!-- Hier Login-Status einfügen -->
     <div id="loginContainer">
         <a href="login.html">Login</a> | <a href="register.html">Registrieren</a>
     </div>
 
-    <img src="menu_icon.png" alt="Menü" class="menu-icon" onclick="toggleMenu()">
+
+    <img src="Images/menu_icon.png" alt="Menü" class="menu-icon" onclick="toggleMenu()">
 </header>
 
 
@@ -39,15 +43,14 @@
     <p><c>Angebot für Neukunden: <br>Code: NewMember25 für 25% Rabatt auf alles!!!</c></p>
 </div>
 
+
 <!-- Sidebar Menü -->
 <nav id="sidebar" class="sidebar">
     <ul>
         <li><a href="#home">Startseite</a></li>
         <li onclick="toggleSubMenu()"><b>Kategorie</b></li>
         <ul id="submenu" class="submenu">
-            <li><a href="#frauen">Frauen</a></li>
-            <li><a href="#maenner">Männer</a></li>
-            <li><a href="#kinder">Kinder</a></li>
+            <!-- Kategorien werden hier dynamisch geladen -->
         </ul>
         <li><a href="#kontakt">Kontakt</a></li>
         <li><a href="#Standort">Standort</a></li>
@@ -55,144 +58,84 @@
     </ul>
 </nav>
 
+
 <main>
     <div class="filter-container">
         <label for="priceMin">Preis von:</label>
         <input type="number" id="priceMin" oninput="handleSearchAndFilter()">
 
+
         <label for="priceMax">bis:</label>
         <input type="number" id="priceMax" oninput="handleSearchAndFilter()">
+
 
         <label for="categoryFilter">Kategorie:</label>
         <select id="categoryFilter" onchange="handleSearchAndFilter()">
             <option value="">Alle Kategorien</option>
-            <option value="Frauen">Frauen</option>
-            <option value="Männer">Männer</option>
-            <option value="Kinder">Kinder</option>
+            <!-- Kategorien werden hier dynamisch geladen -->
         </select>
     </div>
 </main>
 
-    <!-- Kategorie Frauen -->
-    <section id="frauen" class="product-gallery">
-        <h2>Parfüm für Frauen</h2>
-        <div class="product-container">
-            <div class="product" onclick="showProductDetail('Shalimar', '50€', 'Ein femininer Duft, der Eleganz und Stil ausdrückt.', 'Parfüm4.png')">
-                <img src="Images/Parfüm4.png" alt="Parfüm für Frauen 1: Shalimar" class="product-image">
-                <h3>Shalimar</h3>
-                <p>Preis: 50€</p>
-                <p>Beschreibung: Ein femininer Duft, der Eleganz und Stil ausdrückt.</p>
-            </div>
-            <div class="product" onclick="showProductDetail('L\'eau Laurassi', '60€', 'Ein sinnlicher Duft, der die Weiblichkeit feiert.', 'Parfüm2.png')">
-                <img src="Images/Parfüm2.png" alt="Parfüm für Frauen 2: L'eau Laurassi" class="product-image">
-                <h3>L'eau Laurassi</h3>
-                <p>Preis: 60€</p>
-                <p>Beschreibung: Ein sinnlicher Duft, der die Weiblichkeit feiert.</p>
-            </div>
-            <div class="product" onclick="showProductDetail('N°5 Chanel', '55€', 'Ein bezaubernder Duft für die moderne Frau.', 'Parfüm3.png')">
-                <img src="Images/Parfüm3.png" alt="Parfüm für Frauen 3: N°5 Chanel" class="product-image">
-                <h3>N°5 Chanel</h3>
-                <p>Preis: 55€</p>
-                <p>Beschreibung: Ein bezaubernder Duft für die moderne Frau.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Kategorie Männer -->
-    <section id="maenner" class="product-gallery">
-        <h2>Parfüm für Männer</h2>
-        <div class="product-container">
-            <div class="product" onclick="showProductDetail('Hugo Boss', '50€', 'Ein starker und verführerischer Duft für den modernen Mann.', 'Männer1.png')">
-                <img src="Images/Männer1.png" alt="Parfüm für Männer 1: Hugo Boss" class="product-image">
-                <h3>Hugo Boss</h3>
-                <p>Preis: 50€</p>
-                <p>Beschreibung: Ein starker und verführerischer Duft für den modernen Mann.</p>
-            </div>
-            <div class="product" onclick="showProductDetail('Beardo', '60€', 'Ein maskuliner Duft, der Kraft und Stil verkörpert.', 'Männer4.png')">
-                <img src="Images/Männer4.png" alt="Parfüm für Männer 2: Beardo" class="product-image">
-                <h3>Beardo</h3>
-                <p>Preis: 60€</p>
-                <p>Beschreibung: Ein maskuliner Duft, der Kraft und Stil verkörpert.</p>
-            </div>
-            <div class="product" onclick="showProductDetail('Bleu de Chanel', '55€', 'Ein dynamischer Duft für den abenteuerlustigen Mann.', 'Männer5.png')">
-                <img src="Images/Männer5.png" alt="Parfüm für Männer 3: Bleu de Chanel" class="product-image">
-                <h3>Bleu de Chanel</h3>
-                <p>Preis: 55€</p>
-                <p>Beschreibung: Ein dynamischer Duft für den abenteuerlustigen Mann.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kategorie Kinder -->
-    <section id="kinder" class="product-gallery">
-        <h2>Parfüm für Kinder</h2>
-        <div class="product-container">
-            <div class="product" onclick="showProductDetail('Angel classic', '30€', 'Ein frischer und sanfter Duft für die Kleinen.', 'Kinder2.png')">
-                <img src="Images/Kinder2.png" alt="Parfüm für Kinder 1: Angel classic" class="product-image">
-                <h3>Angel classic</h3>
-                <p>Preis: 30€</p>
-                <p>Beschreibung: Ein frischer und sanfter Duft für die Kleinen.</p>
-            </div>
-            <div class="product" onclick="showProductDetail('Dancer', '35€', 'Ein leichter Duft für den verspielten Charakter.', 'Kinder1.png')">
-                <img src="Images/Kinder1.png" alt="Parfüm für Kinder 2: Dancer" class="product-image">
-                <h3>Dancer</h3>
-                <p>Preis: 35€</p>
-                <p>Beschreibung: Ein leichter Duft für den verspielten Charakter.</p>
-            </div>
-            <div class="product" onclick="showProductDetail('Sparkles', '32€', 'Ein sanfter Duft für besondere Anlässe.', 'Kinder3.png')">
-                <img src="Images/Kinder3.png" alt="Parfüm für Kinder 3: Sparkles" class="product-image">
-                <h3>Sparkles</h3>
-                <p>Preis: 32€</p>
-                <p>Beschreibung: Ein sanfter Duft für besondere Anlässe.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Neuer Bereich für Suchergebnisse -->
+<!-- Neuer Bereich für Suchergebnisse -->
 <section id="search-results" class="product-gallery" style="display: none;">
     <h2>Suchergebnisse</h2>
     <div class="product-container"></div>
 </section>
 
 
-    <!-- Kontaktformular -->
-    <section id="kontakt" class="contact-form">
-        <h2>Kontaktieren Sie uns</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+<!-- Produkt-Kategorien -->
+<section id="products" class="product-gallery">
+    <!-- Hier werden Produkte dynamisch geladen -->
+    <div class="product-container"></div>
+</section>
 
-            <label for="email">E-Mail:</label>
-            <input type="email" id="email" name="email" required>
 
-            <label for="message">Nachricht:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+<!-- Kontaktformular -->
+<section id="kontakt" class="contact-form">
+    <h2>Kontaktieren Sie uns</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-            <button type="submit">Senden</button>
-        </form>
-    </section>
 
-    <!-- Standort -->
-    <section id="Standort" class="Standort">
-        <h2>Standort</h2>
-        <div class="map-container">
-            <iframe
-                    src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19421.063226736722!2d13.401012515846773!3d52.521982232973485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1731066424845!5m2!1sde!2sde"
-                    width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </section>
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required>
 
-    <!-- Impressum -->
-    <section id="impressum" class="impressum">
-        <h2>Impressum</h2>
-        <p>Hier stehen die rechtlichen Informationen zum Anbieter dieser Seite.</p>
-    </section>
-</main>
+
+        <label for="message">Nachricht:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+
+        <button type="submit">Senden</button>
+    </form>
+</section>
+
+
+<!-- Standort -->
+<section id="Standort" class="Standort">
+    <h2>Standort</h2>
+    <div class="map-container">
+        <iframe
+                src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19421.063226736722!2d13.401012515846773!3d52.521982232973485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e1edb11286f%3A0x30fc01c366e4166e!2sAlexanderplatz!5e0!3m2!1sde!2sde!4v1731066424845!5m2!1sde!2sde"
+                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+
+<!-- Impressum -->
+<section id="impressum" class="impressum">
+    <h2>Impressum</h2>
+    <p>Hier stehen die rechtlichen Informationen zum Anbieter dieser Seite.</p>
+</section>
+
 
 <footer class="footer">
     <p>© 2024 Lumière. Alle Rechte vorbehalten.</p>
 </footer>
+
 
 <script>
     function toggleMenu() {
@@ -203,132 +146,93 @@
         document.getElementById("submenu").classList.toggle("active");
     }
 
-    // Funktion, um die Produktdetails zu speichern und zur PDP-Seite zu wechseln
+    // API-Aufrufe und Funktionen
+    function fetchCategories() {
+        fetch('http://localhost:3000/categories')  // API-Endpunkt für Kategorien
+            .then(response => response.json())
+            .then(data => {
+                const categoryFilter = document.getElementById('categoryFilter');
+                const submenu = document.getElementById('submenu');
+
+
+                // Kategorien zum Filter und Sidebar-Menü hinzufügen
+                data.forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category.name;
+                    option.textContent = category.name;
+                    categoryFilter.appendChild(option);
+
+
+                    const menuItem = document.createElement('li');
+                    menuItem.textContent = category.name;
+                    menuItem.addEventListener('click', () => handleCategoryClick(category.name));
+                    submenu.appendChild(menuItem);
+                });
+            })
+            .catch(error => console.error('Fehler beim Abrufen der Kategorien:', error));
+    }
+
+
+    function fetchProducts() {
+        fetch('http://localhost:3000/entries')  // API-Endpunkt für Produkte
+            .then(response => response.json())
+            .then(products => {
+                displayProducts(products);
+            })
+            .catch(error => console.error('Fehler beim Abrufen der Produkte:', error));
+    }
+
+
+    function displayProducts(products) {
+        const productContainer = document.querySelector('.product-container');
+        productContainer.innerHTML = '';  // Vorherige Produkte entfernen
+        products.forEach(product => {
+            const productHTML = `
+           <div class="product" onclick="showProductDetail('${product.title}', '${product.price}', '${product.description}', '${product.bild_pfad}')">
+               <img src="Images/${product.bild_pfad}" alt="Produktbild" class="product-image">
+               <h3>${product.title}</h3>
+               <p>Preis: ${product.price}€</p>
+               <p>Beschreibung: ${product.description}</p>
+           </div>
+       `;
+            productContainer.innerHTML += productHTML;
+        });
+    }
+
+
+    // Funktion für Kategoriewahl
+    function handleCategoryClick(category) {
+        fetchProductsForCategory(category);
+    }
+
+
+    function fetchProductsForCategory(category) {
+        fetch(`http://localhost:3000/entries?category=${category}`)  // API-Endpunkt für Produkte nach Kategorie
+            .then(response => response.json())
+            .then(products => {
+                displayProducts(products);
+            })
+            .catch(error => console.error('Fehler beim Abrufen der Produkte für diese Kategorie:', error));
+    }
+
+
+    // Produktdetails speichern
     function showProductDetail(name, price, description, image) {
         localStorage.setItem('productName', name);
         localStorage.setItem('productPrice', price);
         localStorage.setItem('productDescription', description);
         localStorage.setItem('productImage', image);
-
-        // Wechsle zur Produktdetailseite (PDP)
         window.location.href = 'product-detail.html';
     }
 
-    // Dummy-Daten für Produkte (oder aus deiner Datenquelle wie einer Datenbank laden)
-    let allProducts = [
-        { name: "Shalimar", price: 50, category: "Frauen" },
-        { name: "L'eau Laurassi", price: 60, category: "Frauen" },
-        { name: "N°5 Chanel", price: 55, category: "Frauen" },
-        { name: "Hugo Boss", price: 50, category: "Männer" },
-        { name: "Beardo", price: 60, category: "Männer" },
-        { name: "Bleu de Chanel", price: 55, category: "Männer" },
-        { name: "Angel classic", price: 30, category: "Kinder" },
-        { name: "Dancer", price: 35, category: "Kinder" },
-        { name: "Sparkles", price: 32, category: "Kinder" },
-    ];
 
-    // Funktion zur dynamischen Anzeige von Produkten
-    function displayProducts(products) {
-        const productContainer = document.querySelector(".product-container");
-        productContainer.innerHTML = ""; // Lösche vorherige Inhalte
-
-        products.forEach(product => {
-            const productHTML = `
-            <div class="product">
-                <h3>${product.name}</h3>
-                <p>Preis: ${product.price}€</p>
-                <p>Kategorie: ${product.category}</p>
-            </div>
-        `;
-            productContainer.innerHTML += productHTML;
-        });
-    }
-
-    // Funktion zur Verarbeitung von Suche und Filtern
-    function handleSearchAndFilter() {
-        const query = document.getElementById("searchBar").value.toLowerCase();
-        const minPrice = parseFloat(document.getElementById("priceMin").value) || 0;
-        const maxPrice = parseFloat(document.getElementById("priceMax").value) || Infinity;
-        const category = document.getElementById("categoryFilter").value;
-
-        const filteredProducts = allProducts.filter(product => {
-            const matchesQuery = product.name.toLowerCase().includes(query);
-            const inPriceRange = product.price >= minPrice && product.price <= maxPrice;
-            const inCategory = category ? product.category === category : true;
-            return matchesQuery && inPriceRange && inCategory;
-        });
-
-        const searchResultsContainer = document.getElementById("search-results");
-        const productContainer = searchResultsContainer.querySelector(".product-container");
-
-        // Wenn Ergebnisse gefunden wurden, zeige sie an
-        if (filteredProducts.length > 0) {
-            productContainer.innerHTML = ""; // Lösche vorherige Suchergebnisse
-            filteredProducts.forEach(product => {
-                const productHTML = `
-                <div class="product">
-                    <h3>${product.name}</h3>
-                    <p>Preis: ${product.price}€</p>
-                    <p>Kategorie: ${product.category}</p>
-                </div>
-            `;
-                productContainer.innerHTML += productHTML;
-            });
-
-            // Originale Kategorien ausblenden
-            document.querySelectorAll(".product-gallery").forEach(section => {
-                if (section.id !== "search-results") {
-                    section.style.display = "none";
-                }
-            });
-
-            // Suchergebnisse anzeigen
-            searchResultsContainer.style.display = "block";
-        } else {
-            // Wenn keine Ergebnisse gefunden wurden oder die Suchleiste leer ist
-            searchResultsContainer.style.display = "none";
-
-            // Originale Kategorien wieder einblenden
-            document.querySelectorAll(".product-gallery").forEach(section => {
-                section.style.display = "block";
-            });
-
-
-        }
-    }
-
-    function setProductDetails() {
-        const name = localStorage.getItem("productName") || "Produktname nicht verfügbar";
-        const price = localStorage.getItem("productPrice") || "Preis nicht verfügbar";
-        const description = localStorage.getItem("productDescription") || "Beschreibung nicht verfügbar";
-        const image = localStorage.getItem("productImage") || "default.jpg";
-
-        document.getElementById("detail-name").textContent = name;
-        document.getElementById("detail-price").textContent = `Preis: ${price}`;
-        document.getElementById("detail-description").textContent = description;
-        document.getElementById("detail-image").src = image;
-    }
-
-
-    // Event-Listener für die Enter-Taste
-    document.addEventListener("keydown", function (event) {
-        // Prüfe, ob die Enter-Taste gedrückt wurde
-        if (event.key === "Enter") {
-            event.preventDefault(); // Verhindert das Standardverhalten (z. B. Formular-Submit)
-            handleSearchAndFilter(); // Ruft die Such- und Filterfunktion auf
-        }
+    // Event-Listener initialisieren
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchCategories();
+        fetchProducts();
     });
-
-
-    // Initiales Laden aller Produkte
-    document.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("searchBar").addEventListener("input", handleSearchAndFilter);
-        document.getElementById("priceMin").addEventListener("input", handleSearchAndFilter);
-        document.getElementById("priceMax").addEventListener("input", handleSearchAndFilter);
-        document.getElementById("categoryFilter").addEventListener("change", handleSearchAndFilter);
-    });
-
 </script>
 <script src="js/auth.js"></script>
 </body>
 </html>
+

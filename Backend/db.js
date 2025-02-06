@@ -1,5 +1,5 @@
 const mysql = require('mysql2');
-require('dotenv').config({ path: './SQLDetail.env' });
+require('dotenv').config({ path: '/Users/seymanur/IdeaProjects/Webtech-Projekt/SQLDetail.env' });
 
 const db = mysql.createConnection({
     host: process.env.DB_HOST || 'localhost',
