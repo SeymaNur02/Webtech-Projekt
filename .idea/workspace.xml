@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af231974-98fe-4fe5-8396-a3ad6ce8de20" name="Changes" comment="Backend">
-      <change afterPath="$PROJECT_DIR$/Frontend/Images/Parfuem3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/Images/Parfuem4.png" afterDir="false" />
+    <list default="true" id="af231974-98fe-4fe5-8396-a3ad6ce8de20" name="Changes" comment="bilder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/SQLDetail.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Bild3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Images/Parfüm3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Images/Parfüm4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/Images/menu_icon.png.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/js/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/product-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,11 +83,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Frontend" />
+      <recent name="$PROJECT_DIR$/Backend" />
       <recent name="$PROJECT_DIR$/Frontend/Images" />
       <recent name="E:\WebtecEdriver\Backend" />
       <recent name="E:\WebtecEdriver\Backend\routes" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Frontend" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -403,7 +390,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738774562738</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Verbindung zwischen Backend und Frontend; kleien Veränderungen">
+      <option name="closed" value="true" />
+      <created>1738871287750</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1738871287750</updated>
+    </task>
+    <task id="LOCAL-00035" summary="bilder">
+      <option name="closed" value="true" />
+      <created>1738871364038</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1738871364038</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,8 +437,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="veränderung" />
-    <MESSAGE value="HTML und CSS Veränderung" />
     <MESSAGE value="Verbesserung CSS" />
     <MESSAGE value="neue pdp, verändeung in html und css" />
     <MESSAGE value="map und kleine Verbesserungen" />
@@ -459,7 +460,9 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="Backend" />
     <MESSAGE value="Helmet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Helmet" />
+    <MESSAGE value="Verbindung zwischen Backend und Frontend; kleien Veränderungen" />
+    <MESSAGE value="bilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="bilder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
