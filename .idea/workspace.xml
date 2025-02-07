@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af231974-98fe-4fe5-8396-a3ad6ce8de20" name="Changes" comment="bilder">
+    <list default="true" id="af231974-98fe-4fe5-8396-a3ad6ce8de20" name="Changes" comment="bilder kann man sehen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/Style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/js/products.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/product-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/product-detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -406,7 +409,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738871364038</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="bilder kann man sehen">
+      <option name="closed" value="true" />
+      <created>1738924026328</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1738924026328</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +448,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Verbesserung CSS" />
     <MESSAGE value="neue pdp, verändeung in html und css" />
     <MESSAGE value="map und kleine Verbesserungen" />
     <MESSAGE value="map Verbesserungen" />
@@ -462,7 +472,8 @@
     <MESSAGE value="Helmet" />
     <MESSAGE value="Verbindung zwischen Backend und Frontend; kleien Veränderungen" />
     <MESSAGE value="bilder" />
-    <option name="LAST_COMMIT_MESSAGE" value="bilder" />
+    <MESSAGE value="bilder kann man sehen" />
+    <option name="LAST_COMMIT_MESSAGE" value="bilder kann man sehen" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

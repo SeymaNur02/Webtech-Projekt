@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumière - Parfüm-Kollektion</title>
 
-
-    <!-- Google Fonts Preconnect und Import -->
+    <!-- Google Fonts & Stylesheets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-
 
 <header class="header-container">
     <div class="logo-container">
@@ -27,22 +25,18 @@
         <input type="text" id="searchBar" placeholder="Produkte suchen..." oninput="handleSearchAndFilter()">
     </div>
 
-
-    <!-- Hier Login-Status einfügen -->
+    <!-- Login-Status -->
     <div id="loginContainer">
         <a href="login.html">Login</a> | <a href="register.html">Registrieren</a>
     </div>
 
-
     <img src="Images/menu_icon.png" alt="Menü" class="menu-icon" onclick="toggleMenu()">
 </header>
 
-
 <div class="banner">
     <p><strong>Willkommen auf Lumière!</strong></p>
-    <p><c>Angebot für Neukunden: <br>Code: NewMember25 für 25% Rabatt auf alles!!!</c></p>
+    <p>Angebot für Neukunden: <br>Code: NewMember25 für 25% Rabatt auf alles!</p>
 </div>
-
 
 <!-- Sidebar Menü -->
 <nav id="sidebar" class="sidebar">
@@ -58,16 +52,13 @@
     </ul>
 </nav>
 
-
 <main>
     <div class="filter-container">
         <label for="priceMin">Preis von:</label>
         <input type="number" id="priceMin" oninput="handleSearchAndFilter()">
 
-
         <label for="priceMax">bis:</label>
         <input type="number" id="priceMax" oninput="handleSearchAndFilter()">
-
 
         <label for="categoryFilter">Kategorie:</label>
         <select id="categoryFilter" onchange="handleSearchAndFilter()">
@@ -77,17 +68,9 @@
     </div>
 </main>
 
-
-<!-- Neuer Bereich für Suchergebnisse -->
-<section id="search-results" class="product-gallery">
-    <h2>Suchergebnisse</h2>
-    <div class="product-container"></div>
-</section>
-
-
-<!-- Produkt-Kategorien -->
+<!-- Produkt-Anzeige -->
 <section id="products" class="product-gallery">
-    <!-- Hier werden Produkte dynamisch geladen -->
+    <h2>Produkte</h2>
     <div class="product-container"></div>
 </section>
 
@@ -124,57 +107,56 @@
     </div>
 </section>
 
-
 <!-- Impressum -->
 <section id="impressum" class="impressum">
     <h2>Impressum</h2>
     <p>Hier stehen die rechtlichen Informationen zum Anbieter dieser Seite.</p>
 </section>
 
-
 <footer class="footer">
-    <p>© 2024 Lumière. Alle Rechte vorbehalten.</p>
+    <p>©️ 2024 Lumière. Alle Rechte vorbehalten.</p>
 </footer>
 
-
 <script>
+    // Menü umschalten
     function toggleMenu() {
         document.getElementById("sidebar").classList.toggle("active");
     }
 
+    // Untermenü umschalten
     function toggleSubMenu() {
         document.getElementById("submenu").classList.toggle("active");
     }
 
-    // API-Aufrufe und Funktionen
+    // Kategorien abrufen und Dropdown/Sidebar füllen
     function fetchCategories() {
-        fetch('http://localhost:3000/categories')  // API-Endpunkt für Kategorien
+        fetch('http://localhost:3000/categories')
             .then(response => response.json())
             .then(data => {
                 const categoryFilter = document.getElementById('categoryFilter');
                 const submenu = document.getElementById('submenu');
 
-
-                // Kategorien zum Filter und Sidebar-Menü hinzufügen
                 data.forEach(category => {
                     const option = document.createElement('option');
-                    option.value = category.name;
+                    option.value = category.id; // Verwende category.id
                     option.textContent = category.name;
                     categoryFilter.appendChild(option);
 
-
                     const menuItem = document.createElement('li');
                     menuItem.textContent = category.name;
-                    menuItem.addEventListener('click', () => handleCategoryClick(category.name));
+                    menuItem.addEventListener('click', () => {
+                        document.getElementById('categoryFilter').value = category.id;
+                        handleSearchAndFilter(); // Filter anwenden
+                    });
                     submenu.appendChild(menuItem);
                 });
             })
             .catch(error => console.error('Fehler beim Abrufen der Kategorien:', error));
     }
 
-
+    // Produkte abrufen und anzeigen
     function fetchProducts() {
-        fetch('http://localhost:3000/entries')  // API-Endpunkt für Produkte
+        fetch('http://localhost:3000/entries')
             .then(response => response.json())
             .then(products => {
                 displayProducts(products);
@@ -182,41 +164,7 @@
             .catch(error => console.error('Fehler beim Abrufen der Produkte:', error));
     }
 
-
-    function displayProducts(products) {
-        const productContainer = document.querySelector('.product-container');
-        productContainer.innerHTML = '';  // Vorherige Produkte entfernen
-        products.forEach(product => {
-            const productHTML = `
-           <div class="product" onclick="showProductDetail('${product.title}', '${product.price}', '${product.description}', '${product.bild_pfad}')">
-               <img src="Images/${product.bild_pfad}" alt="Produktbild" class="product-image">
-               <h3>${product.title}</h3>
-               <p>Preis: ${product.price}€</p>
-               <p>Beschreibung: ${product.description}</p>
-           </div>
-       `;
-            productContainer.innerHTML += productHTML;
-        });
-    }
-
-
-    // Funktion für Kategoriewahl
-    function handleCategoryClick(category) {
-        fetchProductsForCategory(category);
-    }
-
-
-    function fetchProductsForCategory(category) {
-        fetch(`http://localhost:3000/entries?category=${category}`)  // API-Endpunkt für Produkte nach Kategorie
-            .then(response => response.json())
-            .then(products => {
-                displayProducts(products);
-            })
-            .catch(error => console.error('Fehler beim Abrufen der Produkte für diese Kategorie:', error));
-    }
-
-
-    // Produktdetails speichern
+    // Produktdetails speichern und weiterleiten
     function showProductDetail(name, price, description, image) {
         localStorage.setItem('productName', name);
         localStorage.setItem('productPrice', price);
@@ -225,8 +173,47 @@
         window.location.href = 'product-detail.html';
     }
 
+    // Produkte anzeigen
+    function displayProducts(products) {
+        const productContainer = document.querySelector('.product-container');
+        productContainer.innerHTML = ''; // Vorherige Produkte entfernen
 
-    // Event-Listener initialisieren
+        products.forEach(product => {
+            const productHTML = `
+                <div class="product" onclick="showProductDetail('${product.title}', '${product.price}', '${product.description}', '${product.bild_pfad}')">
+                    <img src="Images/${product.bild_pfad}" alt="Produktbild" class="product-image">
+                    <h3>${product.title}</h3>
+                    <p>Preis: ${product.price}€</p>
+                    <p>Beschreibung: ${product.description}</p>
+                </div>
+            `;
+            productContainer.innerHTML += productHTML;
+        });
+    }
+
+    // Such- und Filterlogik
+    function handleSearchAndFilter() {
+        const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+        const priceMin = parseFloat(document.getElementById('priceMin').value) || 0;
+        const priceMax = parseFloat(document.getElementById('priceMax').value) || Infinity;
+        const categoryValue = document.getElementById('categoryFilter').value;
+
+        fetch('http://localhost:3000/entries')
+            .then(response => response.json())
+            .then(products => {
+                const filteredProducts = products.filter(product => {
+                    const titleMatch = product.title.toLowerCase().includes(searchQuery);
+                    const priceMatch = product.price >= priceMin && product.price <= priceMax;
+                    const categoryMatch = categoryValue === '' || product.category_id == categoryValue; // Kategoriefilter prüfen
+                    return titleMatch && priceMatch && categoryMatch;
+                });
+
+                displayProducts(filteredProducts);
+            })
+            .catch(error => console.error('Fehler beim Abrufen der Produkte:', error));
+    }
+
+    // Initialisierung
     document.addEventListener('DOMContentLoaded', () => {
         fetchCategories();
         fetchProducts();
@@ -235,4 +222,3 @@
 <script src="js/auth.js"></script>
 </body>
 </html>
-
